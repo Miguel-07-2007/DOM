@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 5</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <label for="tarea">Escribe una tarea</label>
+    <label for="tarea">Ingrese una tarea</label>
     <input name="tarea" type="text" id="tarea">
 
-    <h3>Resultado</h3>
-    <p id="resultado"></p>
-
-    <script>
+    <h3>Lista de tareas</h3>
+    <ul id="tareas">
         
+
+    </ul>
+    <script>
+        const entrada = document.getElementById("tarea")
+        const lista_tareas = document.getElementById("tareas")
+
+        entrada.addEventListener("keydown", function(event) {
+         if (event.key === "Enter"){
+            const entrada = document.getElementById("tarea")
+            lista_tareas.innerHTML += `<li>Nueva tarea: ${entrada.value}</li>`
+            entrada.value = ""
+         }
+        })
     </script>
 </body>
 </html>
