@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h2>clicks</h2>
+    <p id="clicks">0</p>
+
+    <button class="btn btn-primary" id="sumar">Sumar</button>
+    <button class="btn btn-danger" id="reiniciar">Reiniciar</button>
+
+    <script>
+        const boton_sumar = document.getElementById("sumar");
+        const boton_reiniciar = document.getElementById("reiniciar")
+        const p_clicks = document.querySelector("#clicks");
+        
+        boton_sumar.addEventListener("click", function(){
+            let contador = parseInt(p_clicks.textContent, 10)
+            p_clicks.textContent = contador += 1;
+        })
+
+        boton_reiniciar.addEventListener("click", function(){
+            let contador = parseInt(p_clicks.textContent, 10)
+            p_clicks.textContent = 0;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <label for="texto">Empiece a escribir</label>
+    <textarea name="texto" id="texto"></textarea>
+
+    <h2>Texto escrito</h2>
+    <p id="resultado"></p>
+
+    <script>
+        const entrada = document.querySelector("#texto")
+        const resultado = document.getElementById("resultado")
+
+        entrada.addEventListener("input", function(){
+            resultado.textContent = entrada.value;
+        })
+    </script>
+</body>
+</html>
