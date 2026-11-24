@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 11</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
 </head>
+
 <body>
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-12 col-md-6 col-lg-4">
+
+
+
+                    <form id="form">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input name="nombre" class="form-control" type="text" id="nombre">
+                                <p id="msg-nombre"></p>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input name="email" type="email" class="form-control" id="email">
+                                    <p id="msg-email"></p>
+                                <div class="mb-3">
+                                    <label for="edad" class="form-label">Edad</label>
+                                    <input name="edad" type="number" class="form-control" id="edad">
+                                        <p id="msg-edad"></p>
+                                    <div class="mb-3"></div>
+                                    <button type="submit" class="btn btn-primary">Registrarme</button>
+                                    <p id="registro-correcto" class="underline"></p>
+                                </div>
+
+                            </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </main>
 </body>
+
 </html>
